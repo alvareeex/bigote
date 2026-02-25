@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.sombrero {
+    background: #000;
+    height: 160px;
+    width: 240px;
+    position: absolute;
+    left: 425px;
+    border-radius: 25% 25% 0 0;
+}
+
+.sombrero_abajo {
+    background: #000;
+    height: 55px;
+    width: 300px;
+    position: absolute;
+    left: 400px;
+    top: 115px;
+    border-radius: 100px;
+}
+/* Fondo */
+.col {
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, rgb(3,117,2), rgb(6,160,4));
+    position: relative;
+}
+
+/* CARA */
+.cara {
+    position: absolute;
+    width: 320px;
+    height: 260px;
+    background: #f5cfa0;
+    border-radius: 50%;
+    left: 50%;
+    top: 120px;
+    transform: translateX(-50%);
+}
+
+/* OJOS */
+.ojos {
+    position: absolute;
+    left: 29%;
+    transform: translateX(-50%);
+    top: 180px;     
+    display: flex;
+    gap: 80px;
+}
+.ojo {
+    width: 55px;
+    height: 75px;
+    background: black;
+    border-radius: 50%;
+    position: relative;
+}
+
+/* Brillo */
+.ojo::after {
+    content: "";
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    top: 12px;
+    left: 10px;
+}
+
+/* BIGOTE — EXACTAMENTE EL TUYO */
+.bigoti {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    position: absolute;
+    color: black;
+
+    box-shadow:
+        400px 260px 0 0 currentColor,
+        550px 260px 0 0 currentColor;
+}
+
+/* Curva izquierda */
+.bigoti::before {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 305px;
+    top: 110px;
+
+    border-bottom: solid 180px currentColor;
+    border-radius: 0 0 0 100%;
+    transform: rotate(-40deg);
+    transform-origin: right 63%;
+}
+
+/* Curva derecha */
+.bigoti::after {
+    content: "";
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    left: 665px;
+    top: 110px;
+
+    border-bottom: solid 180px currentColor;
+    border-radius: 0 0 100% 0;
+    transform: rotate(40deg);
+    transform-origin: left 63%;
+}
